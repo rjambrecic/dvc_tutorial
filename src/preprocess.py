@@ -7,7 +7,7 @@ import argparse
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--test-size', default=0.2)
+    parser.add_argument('--test-size', type=float, default=0.2)
     parser.add_argument('--train-path', default='data/dataset_train_preprocessed.csv')
     parser.add_argument('--test-path', default='data/dataset_test_preprocessed.csv')
 

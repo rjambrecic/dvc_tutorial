@@ -9,7 +9,7 @@ def parse_args():
 
     parser.add_argument('--train-path', default='data/dataset_train_preprocessed.csv')
     parser.add_argument('--model-path', default='data/model.pkl')
-    parser.add_argument('--n-estimators', default=100)
+    parser.add_argument('--n-estimators', type=int, default=100)
 
     return parser.parse_args()
 
