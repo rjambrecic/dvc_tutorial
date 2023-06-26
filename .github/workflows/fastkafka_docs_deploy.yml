@@ -1,0 +1,16 @@
+name: Deploy FastKafka Generated Documentation to GitHub Pages
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: airtai/workflows/fastkafka-ghp@main
+        with:
+          app: "test_fastkafka.application:kafka_app"
